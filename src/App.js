@@ -1,9 +1,40 @@
-import "./App.css";
+// import "./App.css";
+import { NavLink, Routes, Route } from "react-router-dom";
+
+const Profile = () => {
+	return <h1>Это страница профайла</h1>;
+};
+const Messages = () => {
+	return <h1>Это страница сообщений</h1>;
+};
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Привет Мир!</h1>
+		<div className="container-fluid">
+			<div className="row">
+				<div className="col-sm-3">
+					<div className="nav flex-column nav-pills" aria-orientation="vertical">
+						<NavLink className="nav-link" to="profile">
+							Профиль
+						</NavLink>
+						<NavLink className="nav-link" to="messages">
+							Сообщения
+						</NavLink>
+						<NavLink className="nav-link" to="settings">
+							Настройки
+						</NavLink>
+						<NavLink className="nav-link" to="friends">
+							Друзья
+						</NavLink>
+					</div>
+				</div>
+				<div className="col-sm-9">
+					<Routes>
+						<Route path="/profile" element={<Profile />} />
+						<Route path="/messages" element={<Messages />} />
+					</Routes>
+				</div>
+			</div>
 		</div>
 	);
 }

@@ -7,6 +7,12 @@ const Profile = () => {
 const Messages = () => {
 	return <h1>Это страница сообщений</h1>;
 };
+const Settings = () => {
+	return <h1>Это страница с настройками</h1>;
+};
+const Friends = () => {
+	return <h1>Это страница друзей</h1>;
+};
 
 function App() {
 	return (
@@ -32,6 +38,8 @@ function App() {
 					<Routes>
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/messages" element={<Messages />} />
+						<Route path="/settings" element={<Settings />} />
+						<Route path="/friends" element={<Friends />} />
 					</Routes>
 				</div>
 			</div>

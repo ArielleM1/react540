@@ -5,8 +5,6 @@ const TableRow = (props) => {
 			<td>
 				{props.name} {props.lastname}
 			</td>
-			<td>Otto</td>
-			<td>@mdo</td>
 		</tr>
 	);
 };

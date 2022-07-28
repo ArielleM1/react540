@@ -1,8 +1,9 @@
 import styles from "./Profile.module.css";
 
 const Profile = (props) => {
-	let user = props.function();
-	console.log(user);
+	let userID = window.location.pathname.split("/")[2];
+	let user = props.function(userID);
+	// console.log(user);
 	return (
 		<div className="row">
 			<div className="col-md-3">
